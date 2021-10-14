@@ -1,10 +1,7 @@
-<h1>Password Generator</h1>
+<h1>Hello, i'm Arthur Furtunato</h1>
 
-<form action="{% url 'password' %}">
-    <select name="length">
-        {% for i in range %}
-            <option value="{{ i }}">{{ i }}</option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Generate Password">
-</form>
+<p>I made this code, when i was studying the framework Django</p>
+<br>
+<p>Creating a random password</p>
+
+<a href="{% url 'generator' %}">Click here</a> and start now.

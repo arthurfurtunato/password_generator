@@ -1,0 +1,22 @@
+<h1>Password Generator</h1>
+
+<form action="{% url 'password' %}" method="POST">
+    {% csrf_token %}
+    <select name="length">
+        {% for i in range %}
+            <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select>
+    
+    <br>
+
+    <input type="checkbox" name="uppercase">Uppercase
+    <br>
+    <input type="checkbox" name="numbers">Numbers
+    <br>
+    <input type="checkbox" name="special">Special Characters
+    <br>
+    <input type="submit" value="Generate Password">
+    <br>
+    <p>If you wants go back to the home <a href="{% url 'index' %}">Click here</a> </p>
+</form>
