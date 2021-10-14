@@ -1,0 +1,10 @@
+<h1>Password Generator</h1>
+
+<form action="{% url 'password' %}">
+    <select name="length">
+        {% for i in range %}
+            <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Generate Password">
+</form>
